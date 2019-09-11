@@ -15,8 +15,10 @@ This is a relatively simple app, however we are looking for more than just the t
 
 ## Solution
 
-I've use Symfony MVC framework to complete the assignment.
-Below defined the steps to run the project:
+I've used Symfony MVC framework to complete the assignment.
+Hosted the JSON in myjson and imported it into the Controller and passed as an argument to the view. Also I have implemented the sorting functionality on cashback column.
+
+Below are the steps to run the project:
 
 1. Download the project to the desired directory on your computer
 2. cd project-directory
