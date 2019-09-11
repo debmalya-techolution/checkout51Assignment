@@ -18,6 +18,9 @@ This is a relatively simple app, however we are looking for more than just the t
 I've used Symfony MVC framework to complete the assignment.
 Hosted the JSON in myjson and imported it into the Controller and passed as an argument to the view. Also I have implemented the sorting functionality on cashback column.
 
+# Sorting Approach
+As we have very less data, performed the sorting operation at the Controller. In case of large data, I can implement the sorting functionality at the repositories and add offset approach and pagination for better performance.
+
 Below are the steps to run the project:
 
 1. Download the project to the desired directory on your computer
