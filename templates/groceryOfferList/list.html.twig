@@ -1,0 +1,53 @@
+{# templates/groceryOfferList/list.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row filterselect">
+            <form id="filtertype">
+                <select class="form-control " id="filter" name="filter">
+                    <option selected>Sort Cashback</option>
+                    <option {% if filterType == 'Ascending'%} selected {% endif %}>Ascending</option>
+                    <option {% if filterType == 'Descending'%} selected {% endif %}>Descending</option>
+                </select>
+            </form>
+        </div>
+
+    <table id="offerlist" class="table">
+        <thead>
+            <tr>
+                <th id="name" class="">Name <img id="up" src="{{ asset('images/sort-down.png') }}" height=10 width=10 style="display: none;"></th>
+                <th scope="col" class="text-center">Items <img id="" src="{{ asset('images/sort-down.png') }}" height=10 width=10 style="display: none;"></th>
+                <th id="cashback" class="text-right">Cashback <img id="up" src="{{ asset('images/sort-down.png') }}" height=10 width=10 style="display: none;"></th>
+            </tr>
+        </thead>
+        {% for item in items %}
+            <tbody>
+                <tr>
+                    <td>{{item.name}}</td>
+                    <td class="text-center"><img src="{{item.image_url}}" alt="" border=3 height=50 width=50/></td>
+                    <td class="text-right">$ {{item.cash_back}}</td>
+                </tr>
+            </tbody>
+        {% endfor %}
+    </table>
+
+    </div>
+{% endblock %}
+
+
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/offerlist.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        $('select').on('change', function (e) {
+            var optionSelected = $("option:selected", this);
+            var valueSelected = this.value;
+            this.form.submit();
+        });
+    </script>
+{% endblock %}

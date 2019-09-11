@@ -1,0 +1,53 @@
+html, body {
+    width: 100%;
+}
+
+#offerlist {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#offerlist td, #offerlist th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#offerlist tr:nth-child(even){background-color: #f2f2f2;}
+
+#offerlist tr:hover {background-color: #ddd;}
+
+#offerlist th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4c4caf;
+    color: white;
+}
+
+.footer {
+    background-color: #111111;
+    color: #eeeeee;
+    border-top: 1px solid red;
+    height: 60px;  /* footer height */
+    padding-top: 20px;
+    display: block;
+    margin-top: 20px; /* space between content and footer */
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+}
+
+.navbar{
+    background-color: #76b844;
+}
+
+.navbar-brand{
+    font-family: serif;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0px auto;
+}
+
+.filterselect{
+    margin: 10px 0px 10px 0px;
+}
